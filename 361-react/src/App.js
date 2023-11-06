@@ -33,7 +33,7 @@ function App() {
       </main>
       <footer>
       <p>&copy;2023 Daksh Pandit.</p>
-            <p class="copyright"><font size="-2"><strong>*All rights reserved</strong></font></p>
+            <p class="copyright"><font size="-3">*All rights reserved</font></p>
       </footer>
 
 
