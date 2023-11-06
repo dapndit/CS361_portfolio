@@ -1,24 +1,45 @@
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import logo from './logo.svg';
+
+
+import Nav from './components/nav.js';
+import HomePage from './pages/HomePage.js';
+import FAQ from './pages/faq.js';
+import Plans from './pages/plans.js';
+import MyLocker from './pages/MyLocker.js';
+
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+    <BrowserRouter>
+      <header className="">
+        <h1>Fit Locker</h1>
       </header>
-    </div>
+
+      <Nav />
+      <main>
+        <section>
+          <Routes>
+            <Route path="/" element={<HomePage/>}/>
+            <Route path="/plans" element={<Plans/>}/>
+            <Route path="/faq" element={<FAQ/>}/>
+            <Route path="/MyLocker" element={<MyLocker/>}/>
+          </Routes>
+        </section>
+      </main>
+      <footer>
+      <p>&copy;2023 Daksh Pandit.</p>
+            <p class="copyright"><font size="-2"><strong>*All rights reserved</strong></font></p>
+      </footer>
+
+
+    </BrowserRouter>
+    </>
   );
 }
 
