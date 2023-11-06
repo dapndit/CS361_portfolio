@@ -1,4 +1,3 @@
-import HomePage from "./HomePage"
 
 function MyLocker() {
     return (
