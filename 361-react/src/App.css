@@ -25,7 +25,79 @@
     padding:;
     max-width:960px;
   }
+/*  ----- Collapsible -----  */  
+
   
+  .Collapsible__trigger.is-open svg {
+    transform: rotate(180deg);
+  }
+
+  /* // The main container element */
+.Collapsible {
+  background-color: rgb(246,241,238);
+  padding-bottom: 20px;
+}
+
+.Collapsible__contentInner {
+  padding: 10px;
+  border: 1px solid #ed7d31;
+  border-top: 1px solid #ed7d31;
+
+  p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 20px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+/* when clicked opens collapsible area */
+.Collapsible__trigger {
+  font-weight: 400;
+  text-decoration: none;
+  position: relative;
+  padding: 10px;
+  background: #ed7d31;
+  color:rgb(79,74,69);
+  font-family: 'Barlow Condensed', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+
+  &.is-open {
+    &:after {
+      transform: rotateZ(180deg);
+    }
+  }
+
+  /* &.is-disabled {
+    opacity: 0.5;
+    background-color: grey;
+  }
+}
+
+.CustomTriggerCSS {
+  background-color: lightcoral;
+  transition: background-color 200ms ease;
+  
+  
+}
+
+.CustomTriggerCSS--open {
+  background-color: darkslateblue;
+}
+
+.Collapsible__custom-sibling {
+  padding: 5px;
+  font-size: 12px;
+  background-color: #CBB700;
+  color: black; */
+}
+
+
   /*  ----- Page layout blocks -----  */
   header {}
   main {
@@ -115,15 +187,32 @@
   ins {}
   
   /*  ----- Table ----- */
-  table {}
+  table {
+    border:1px solid #b3adad;
+    border-collapse:collapse;
+    color: rgb(79,74,69);
+    padding: 5px;
+  }
+  table th {
+    border:1px solid #b3adad;
+    padding:5px;
+    color: rgb(79,74,69);
+    text-align: left;
+
+  }
+  table td {
+    border:1px solid #b3adad;
+    text-align:left;
+    padding:5px;
+    color: rgb(79,74,69);
+  }
   caption {}
   thead {}
   tbody {}
   tfoot {}
   tr {}
     tr:nth-child(even) {}
-  th {}
-  td {}
+
     td:nth-child(1) {}
   colgroup {}
   data {}
