@@ -12,6 +12,8 @@ function MyLocker() {
        <>
     <h2>My Locker</h2>
 
+            <p><button>Create New Routine</button></p>
+
             <p>Below you will find the plans that you have saved.</p>
 
             <Collapsible trigger={["Push Pull Legs", <BsChevronDown/>]}>
