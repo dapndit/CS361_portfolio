@@ -32,6 +32,13 @@ function faq() {
             see a delete button. Select it, and the routine will be removed.
          </p>
          </Collapsible>
+
+         <Collapsible trigger={["I don't know where or how to begin!", <BsChevronDown/>]}>
+         <p>This is exactly why we are here. Navigate to the Plans page to view the most popular strength training routines
+            in the industry right now. From there, add some of them to MyLocker. Under MyLocker you can make edits to 
+            the pre-existing routines in order to cater it to your own needs!
+         </p>
+         </Collapsible>
     </>
     )
 }
