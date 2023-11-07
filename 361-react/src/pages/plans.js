@@ -151,7 +151,7 @@ function Plans() {
 	</table>
             </p>
         </Collapsible>
-        <button onClick={clickMe}>Add to MyLocker</button>
+    <button onClick={clickMe}><p>Add to MyLocker</p></button>
     </Collapsible>
     
     
@@ -295,7 +295,7 @@ function Plans() {
             </p>
         </Collapsible>
 
-        <button></button>
+        <button onClick={clickMe}><p>Add to MyLocker</p></button>
     </Collapsible>
 
 
