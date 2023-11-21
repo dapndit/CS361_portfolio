@@ -61,3 +61,5 @@ else:
 ```
 
 ### UML Sequence Diagram
+![uml](https://github.com/dapndit/CS361_portfolio/assets/107951591/7a4ffc9d-5939-4ab6-92a1-46cd5da8618a)
+
