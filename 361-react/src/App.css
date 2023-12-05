@@ -220,7 +220,13 @@
   
   
   /*  ----- Form ----- */
-  form {}
+  form {
+  }
+  select {
+    border: 2px solid #ed7d31;
+    color: #ed7d31;
+    margin: 5px ;
+  }
   fieldset {}
     legend {}
   label {}
@@ -232,6 +238,7 @@
     background-color: rgb(246,241,238);
     font-family: 'Barlow Condensed', sans-serif; 
     padding: 2px;
+    margin-left: 5px;
     /* box-shadow: rgba(0, 0, 0, 0.07) 0px 2px 4px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1.5px 0px; */
     font-size: 16px;
   }

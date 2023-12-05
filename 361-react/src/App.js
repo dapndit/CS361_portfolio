@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Router, Switch } from 'react-router-dom';
 
 
 
@@ -8,7 +8,7 @@ import HomePage from './pages/HomePage.js';
 import FAQ from './pages/faq.js';
 import Plans from './pages/plans.js';
 import MyLocker from './pages/MyLocker.js';
-
+import FindExercises from './pages/FindExercises.js';
 import './App.css';
 
 
@@ -28,6 +28,7 @@ function App() {
             <Route path="/plans" element={<Plans/>}/>
             <Route path="/faq" element={<FAQ/>}/>
             <Route path="/MyLocker" element={<MyLocker/>}/>
+            <Route path="/FindExercises" element={<FindExercises/>}/>
           </Routes>
         </section>
         
