@@ -7,6 +7,7 @@ function HomePage() {
     <p>Fit Locker, a place where you can find various strength training routines, create your own,
         and contribute to the fitness community.
     </p>
+    <button>Create New Routine</button>
     </>
     );
 }
