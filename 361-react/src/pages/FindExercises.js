@@ -22,7 +22,9 @@ function FindExercises() {
 
       if (response.ok) {
         const data = await response.json();
-        setExerciseData(Object.entries(data).map(([exerciseName, { url }]) => ({ exerciseName, url })));
+        const formattedData = Object.entries(data).map(([exerciseName, { url }]) => ({ exerciseName, url }));
+        setExerciseData(formattedData);
+        console.log('Exercise Data:', formattedData); // Log the search results to the console
       } else {
         throw new Error('Failed to fetch data');
       }
@@ -31,7 +33,6 @@ function FindExercises() {
       // Handle error states or display error message to the user
     }
   };
-
   const muscleCategories = [
     'chest',
     'forearms',
