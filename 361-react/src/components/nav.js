@@ -9,6 +9,7 @@ function Nav(){
             <Link to="../faq">FAQ</Link>
             <Link to="../MyLocker">MyLocker</Link>
             <Link to="../FindExercises">Explore Exercises</Link>
+            {/* <Link to="../CreateRoutines">Create Routines</Link> */}
         </nav>
     );
 }

@@ -9,6 +9,7 @@ import FAQ from './pages/faq.js';
 import Plans from './pages/plans.js';
 import MyLocker from './pages/MyLocker.js';
 import FindExercises from './pages/FindExercises.js';
+import CreateRoutines from './pages/CreateRoutines.js';
 import './App.css';
 
 
@@ -29,6 +30,7 @@ function App() {
             <Route path="/faq" element={<FAQ/>}/>
             <Route path="/MyLocker" element={<MyLocker/>}/>
             <Route path="/FindExercises" element={<FindExercises/>}/>
+            <Route path="/CreateRoutines" element={<CreateRoutines/>}/>
           </Routes>
         </section>
         
