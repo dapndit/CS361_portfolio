@@ -13,6 +13,7 @@ const CreateRoutines = () => {
     { exerciseName: '', sets: '', reps: '' },
     { exerciseName: '', sets: '', reps: '' },
   ]);
+  const [error, setError] = useState(null); // State to hold error message
 
   const handleRoutineNameChange = (event) => {
     setRoutineName(event.target.value);
@@ -28,25 +29,40 @@ const CreateRoutines = () => {
     setExercises(newExercises);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Here you can handle the submission of the data, like sending it to your backend or performing other operations
-    console.log({ routineName, routineDescription, exercises });
-
-    
-    setRoutineName('');
-    setRoutineDescription('');
-    setExercises([
-      { exerciseName: '', sets: '', reps: '' },
-      { exerciseName: '', sets: '', reps: '' },
-      { exerciseName: '', sets: '', reps: '' },
-      { exerciseName: '', sets: '', reps: '' },
-      { exerciseName: '', sets: '', reps: '' },
-      { exerciseName: '', sets: '', reps: '' },
-    ]);
-
-    // Navigate to the home page after submission
-    navigate('/');
+  
+    try {
+      const response = await fetch('http://localhost:3005/api/routines', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ routineName, routineDescription, exercises }),
+      });
+  
+      if (response.ok) {
+        // Reset form fields if successful
+        setRoutineName('');
+        setRoutineDescription('');
+        setExercises([
+          { exerciseName: '', sets: '', reps: '' },
+          { exerciseName: '', sets: '', reps: '' },
+          { exerciseName: '', sets: '', reps: '' },
+          { exerciseName: '', sets: '', reps: '' },
+          { exerciseName: '', sets: '', reps: '' },
+          { exerciseName: '', sets: '', reps: '' },
+        ]);
+        // Navigate to the home page after successful submission
+        navigate('/');
+      } else {
+        throw new Error('Failed to create routine');
+      }
+    } catch (error) {
+      console.error('Error:', error.message);
+      // Set error message state for displaying to the user
+      setError('Failed to save routine. Please try again.');
+    }
   };
 
   return (
