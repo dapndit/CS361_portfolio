@@ -3,7 +3,6 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const routineRoutes = require('./routes/routineRoutes'); // Import the routineRoutes
 
-
 const app = express();
 app.use(express.json());
 
@@ -22,14 +21,10 @@ db.once('open', () => {
 // Use the routineRoutes for handling routine-related routes
 app.use('/api', routineRoutes);
 
-app.use(cors({
-  origin: 'http://localhost:3000/', 
-  allowedHeaders: ['Content-Type', 'Authorization', 'Custom-Header'],
-}));
+// Enable CORS for all origins and allowed headers
+app.use(cors());
 
-app.options('*', cors());
-
-const PORT = process.env.PORT || 3005;
+const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

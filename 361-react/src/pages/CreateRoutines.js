@@ -33,12 +33,21 @@ const CreateRoutines = () => {
     event.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3005/api/routines', {
+      const proxyRequest = {
+        url: '/api/routines', // Target the backend URL relative to the proxy
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ routineName, routineDescription, exercises }),
+        body: { routineName, routineDescription, exercises },
+      };
+  
+      const response = await fetch('http://localhost:3005/api/proxy', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(proxyRequest),
       });
   
       if (response.ok) {
@@ -64,6 +73,8 @@ const CreateRoutines = () => {
       setError('Failed to save routine. Please try again.');
     }
   };
+  
+  
 
   return (
     <div>
