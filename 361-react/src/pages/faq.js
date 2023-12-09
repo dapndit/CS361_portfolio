@@ -15,8 +15,9 @@ function faq() {
          </Collapsible>
 
          <Collapsible trigger={["How do I create my own routine?", <BsChevronDown/>]}>
-         <p>Go to MyLocker and select "Create New Routine". Step-by-step follow the prompts, and
-            you will be able to create a routine catered to your needs.
+         <p>Go to Home and select "Create New Routine". You will be redirected another page, where
+            you will be able to give your routine a name, description, and enter 6 exercises,
+            including sets, and reps.
          </p>
          </Collapsible>
 
@@ -27,16 +28,24 @@ function faq() {
          </p>
          </Collapsible>
 
-         <Collapsible trigger={["How do I delete a workout plan from MyLocker?", <BsChevronDown/>]}>
-         <p>Go to Plans and click to expand on the routine you would like to delete.  At the bottom of the dropdown, you will
+         <Collapsible trigger={["How do I delete a workout routine from MyLocker?", <BsChevronDown/>]}>
+         <p>Go to MyLocker and click to expand on the routine you would like to delete.  At the bottom of the dropdown, you will
             see a delete button. Select it, and the routine will be removed.
          </p>
          </Collapsible>
 
+         <Collapsible trigger={["How do I delete an exercise from my workout routine", <BsChevronDown/>]}>
+         <p>Go to MyLocker and click to expand on the routine containing the exercise you would like to delete.  
+            You will see a delete button next to the exercise. Select it, and the routine will be removed.
+         </p>
+         </Collapsible>
+
          <Collapsible trigger={["I don't know where or how to begin!", <BsChevronDown/>]}>
-         <p>This is exactly why we are here. Navigate to the Plans page to view the most popular strength training routines
-            in the industry right now. From there, add some of them to MyLocker. Under MyLocker you can make edits to 
-            the pre-existing routines in order to cater it to your own needs!
+         <p>This is exactly why we are here. Navigate to the Explore Exercises page to view the most popular exercises based on
+            the muscle group you want to focus on. Select the muscle group and search. After viewing your results,
+            you can even go to another site to learn more about the exercise.
+
+            Once you are ready, go to the home page and click on Create Routine to create your new routine. 
          </p>
          </Collapsible>
     </>
